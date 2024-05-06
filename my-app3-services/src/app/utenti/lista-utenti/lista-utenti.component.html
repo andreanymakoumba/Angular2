@@ -1,0 +1,9 @@
+<h2>lista utenti</h2>
+
+<ul>
+    <li *ngFor="let utente of listaUtenti">
+        {{utente.id}} {{utente.nome}} {{utente.cognome}} {{utente.corso}}
+
+        <button (click)="onRemoveUtente(utente.id)">remove Utente</button>
+    </li>
+</ul>
