@@ -1,0 +1,31 @@
+<p>edit-pizza works!</p>
+
+<!--<p>Qui creo il mio Gioco con un form e lo emette al parent</p> -->
+
+<div class="col-6">
+    <div class="mb-3">
+        <label for="" class="form-label">Nome Pizza</label>
+        <!--TWO WAY DATABINDING : ovvero associo un campo input con una prop di classe. per poter
+        utilizzare la direttiva ngModel devo importare i formsModule nell'angular.module.ts-->
+        <input type="text" class="form-control" [(ngModel)]="nomePizza"/>
+    </div>
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Dai un nome alla tua Pizza</label>
+         <select
+                multiple
+                class="form-select form-select-lg"  [(ngModel)]="ingredientiPizza">
+                <option selected>Select one</option>
+                <option value="">New Delhi</option>
+                <option value="">Istanbul</option>
+                <option value="">Jakarta</option>
+            </select>
+        </div>
+        
+   
+    {{nomePizza}} - {{ingredientiPizza}}
+   
+    </div>
+    
+    <button class = "btn btn-primary" (click)="onCreaPizza()">crea</button>
+    

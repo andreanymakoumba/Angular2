@@ -1,0 +1,17 @@
+
+<div class="card coal">
+    <img
+        class="card-img-top"
+        src="{{pizzaSingola.locandina}}"
+        alt="Title"
+    />
+    <div class="card-body">
+        <h4 class="card-title">{{pizzaSingola.nome}}</h4>
+        <ul class="list-unstyled"> <strong>Ingredienti:</strong>
+            <li *ngFor="let ingrediente of pizzaSingola.ingredienti">
+                {{ingrediente}}
+            </li>
+        </ul>
+        <p class="card-text">prezzo: {{pizzaSingola.prezzo}}</p>
+    </div>
+</div>
